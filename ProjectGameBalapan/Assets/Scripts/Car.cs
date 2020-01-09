@@ -2,15 +2,32 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Car : MonoBehaviour {
+public class Car : MonoBehaviour
+{
+	[SerializeField]	private float speed, healthPoint;
+	[SerializeField]	private string name;
+	public float Speed
+	{
+		get
+		{
+			return speed;
+		}
+		set
+		{
+			speed = value;
+		}
+	}
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+  public string Name
+  {
+    get
+    {
+      return name;
+    }
+
+    set
+    {
+      name = value;
+    }
+  }
 }
