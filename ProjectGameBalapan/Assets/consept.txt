@@ -1,0 +1,65 @@
+GAME 
+Konsep : Rumble Racing
+Platform : Android
+Genre : Arcade (Single, Multiplayer)
+Konsep Cerita : Mitologi Yunani
+Fitur : LAN
+
+
+User Interfaces :
+  List Scene : 
+    -Main Menu
+    -Misi
+    -Server
+    -Tiap Arena 
+
+  Scene Main Menu:
+    1.Menu Button:
+      a.Play Mode
+        i.Single Player
+          1.Mission
+            a.New Game
+            b.Continue
+          2.Collection
+            a.Arena
+            b.Mobil
+        ii.Multi Player
+          1.Create Server
+            a.Nama 
+            b.Password (Opsional)
+          2.Join Server
+            a.Connect Server
+          3.Mobil 
+            a.Arena
+      b.Setting
+        i.SFX
+        ii.BGM
+        iii.Brightness (Opsional)
+      c.Help
+        i.Guide
+          1.Control Game
+          2.Multiplayer Guide
+        ii.About
+      d.Quit
+
+  Scenes Misi 
+    Zeus  Arc :
+      -Hercules (12 Slot Item)
+      -Athena (Healing)
+      -Hermes  (Lightning)
+      -Apollo (Seni)
+      -Arthemis (Liar)
+      -Perseus (Serangan Fisik)
+    
+  Misi
+    1.Arena : 
+      a.Jebakan Jalan Berlubang
+      b.Jebakan Jalan Kembali Ke Start
+      c.Jebakan Jalan Licin
+      d.Cuaca Jalan Berkabut (Pengendara Buta Arah)
+      e.Cuaca Badai (Pengendara Tertiup Angin dan Tidak Terkontrol)
+    2.Items :
+      a.Tembak (Efek berhenti dan terpental)
+      b.Menempel (Efek  menempel kemobil lawan selama 30 detik)
+      c.Menukar (Menukar posisi si penembak dengan si korban)
+      d.Invisible (Tidak terlihat di arena)
