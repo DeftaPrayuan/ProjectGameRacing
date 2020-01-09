@@ -68,12 +68,11 @@ User Interfaces :
 
 Class:
   + Car:
-    - speed : int
     - name : string
-    + Name : string
-      - get
-      - set
+    - speed : int
+    + Rem : int
     + Speed : int
       - get
       - set
+    + 
       
