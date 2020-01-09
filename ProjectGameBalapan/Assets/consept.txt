@@ -63,3 +63,17 @@ User Interfaces :
       b.Menempel (Efek  menempel kemobil lawan selama 30 detik)
       c.Menukar (Menukar posisi si penembak dengan si korban)
       d.Invisible (Tidak terlihat di arena)
+
+-------------------------------------------------------------------------
+
+Class:
+  + Car:
+    - speed : int
+    - name : string
+    + Name : string
+      - get
+      - set
+    + Speed : int
+      - get
+      - set
+      
