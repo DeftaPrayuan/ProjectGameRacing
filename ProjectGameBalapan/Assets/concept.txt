@@ -1,9 +1,9 @@
 GAME:
-Concept : Rumble Racing
-Platform : Android
-Genre : Arcade (Single, Multiplayer)
+Concept     : Rumble Racing
+Platform    : Android
+Genre       : Arcade (Single, Multiplayer)
 Story Theme : Mitologi Yunani
-Feature : LAN
+Feature     : LAN
 
 
 User Interfaces:
@@ -16,11 +16,11 @@ User Interfaces:
   Scene Main Menu:
     1.Menu Button:
       A.Play Mode
-        i.Single Player
+        i .Single Player
           1.Mission
             a.New Game
             b.Continue
-          2.Collection
+          2.Collections
             a.Arena
             b.Vehicle
         ii.Multi Player
@@ -32,25 +32,55 @@ User Interfaces:
           3.Arena
             a.Vehicle
       B.Setting
-        i.SFX
-        ii.BGM
+        i  .SFX
+        ii .BGM
         iii.Brightness (Opsional)
       C.Help
-        i.Guide
-          1.Control Game
-          2.Multiplayer Guide
-        ii.About
+        i  .Control Game
+        ii .Multiplayer Guide
+        iii.About
       D.Quit
+        i .Yes
+        ii.No
 
   Scenes Misi 
+    Partner :
+      -Athena (Healing) (Sky)
+
     Zeus  Arc :
-      -Hercules (12 Slot Item)
-      -Athena (Healing)
-      -Hermes  (Lightning)
-      -Apollo (Seni)
-      -Arthemis (Liar)
-      -Perseus (Serangan Fisik)
+      -Zeus (Thunder) (Sky) = Elang
+      -Herakles (11 Slot Item) (Sky) = Singa
+        -Singa Nemeia
+        -Hidra Lema
+        -Rusa Kerineia
+        -Babi Erimanthos
+        -Kandang kuda milik Raja Augeas
+        -Burung2 Stimfalia
+        -Banteng Kreta
+        -Kuda2 Betina Diomedes
+        -Sabuk Hippolita
+        -Ternak milik Gerion
+        -Apel Hesperides
+      -Hermes (Lightning) (Sky) = Kendaraan biasa
+        -Bandit
+      -Apollo (Art) (Sky) = Burung gagak dan lumba-lumba
+      -Artemis (Wild) (Sky) = Kereta perang yg ditarik sepasang rusa
+        -Penyelamatan para wanita dari makhluk buas
+
+    Poseidon Arc :
+      -Poseidon (Tsunami) (Ocean) = Kereta ditarik Kuda Laut
+      -Perseus (Physical Attack) (Sky, Ocean)
+        -Penyelamatan Andromeda
+        -Mendapatkan Pegasus
+        -Gorgon
+        -Medusa
     
+    Hades Arc :
+      -Hades (Ruler of Hell) (Hell) = Kereta ditarik 4 kuda hitam
+        -Cerberus vs Herakles
+        -Hermes vs Perajurit untuk masuk ke dunia bawah bersama Herakles
+
+
   Misi
     1.Arena : 
       a.Jebakan Jalan Berlubang
@@ -67,6 +97,19 @@ User Interfaces:
 -------------------------------------------------------------------------
 
 class:
+  +Player:
+    -name: string
+    -vehicle: Vehicle
+    -rank: int
+    -skill[]: SKill
+    +Name: string
+      get,set
+    +Vehicle: Vehicle
+      get,set
+    +Rank: int
+      get,set
+    +UseSkill(index: int): void
+
   +Vehicle:
     -name: string
     -speed: int
@@ -77,16 +120,6 @@ class:
     +Name: string
       get
     +Rem(): void
-
-  +Player:
-    -name: string
-    -vehicle: Vehicle
-    -skill[]: SKill
-    +Name: string
-      get,set
-    +Vehicle: Vehicle
-      get,set
-    +UseSkill(index: int): void
 
   +Skill:
     -name: string
@@ -122,3 +155,26 @@ interface:
     +MaxHealthPointDown:
       +MaxHealthPointDown(currentHP: int): int
   
+
+----------------------------------------------------------------
+
+Class:
+  +MainMenu:
+    -Start(): void
+    +PanelMission(): void
+    +NewGame(): void
+    +Continue(): void
+    +VolumeSFX(): void
+    +VolumeBGM(): void
+    +BrightnessLevel(): void
+    +QuitConfirm(): void
+    +PanelCollection(): void
+    +PanelArenaCollections(): void
+    +PanelVehicleCollections(): void
+    +PanelSetting(): void
+    +PanelHelp(): void
+    +PanelControlGame(): void
+    +PanelAbout(): void
+    -PanelQuit(): void
+
+
