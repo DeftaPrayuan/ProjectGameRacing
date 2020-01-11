@@ -68,36 +68,57 @@ User Interfaces:
 
 class:
   +Vehicle:
-    -name : string
-    -speed : int
-    -power : int
-    -defense : int
-    -healthPoint : float
-    #tipeKendaraan : TipeKendaraan
-    +Name : string
+    -name: string
+    -speed: int
+    -power: int
+    -defense: int
+    -healthPoint: float
+    -vehicleType: VehicleType
+    +Name: string
       get
-    +Rem() : void
+    +Rem(): void
 
-class:
-  +Skill : abstract
-    -name : string
-    -animation : Animation
-    +PlayAnimation() : void
-
-class:
   +Player:
-    -name : string
-    -vehicle : Vehicle
-    -skill[] : SKill
-    +Vehicle : Vehicle
-      set
-    +UseSkill(index : int) : void
+    -name: string
+    -vehicle: Vehicle
+    -skill[]: SKill
+    +Name: string
+      get,set
+    +Vehicle: Vehicle
+      get,set
+    +UseSkill(index: int): void
 
-class:
-  <Enemuration>
-  TipeKendaraan:
-    Ocean
-    Hell
-    Sky
+  +Skill:
+    -name: string
+    -animation: Animation
+    +PlayAnimation(): void
+
+-------------------------------------------------------------------------
+
+Enemuration:
+  VehicleType:
+    Ocean, Hell, Sky
       
+-------------------------------------------------------------------------
 
+interface:
+  BuffType:
+    +PowerUp:
+      +PowerUp(currentPower: int): int
+    +DefensiveUp:
+      +DefenseUp(currentDef: int): int
+    +MaxHealthPointUp:
+      +MaxHealthPointUp(currentHP: int): int
+    +SpeedUp:
+      +SpeedUp(currentSpd: int): int
+
+  DebuffType:
+    +PowerDown:
+      +PowerDown(currentPower: int): int
+    +DefenseDown:
+      +DefenseDown(currentDef: int): int
+    +SpeedDown:
+      +SpeedDown(currentSpd: int): int
+    +MaxHealthPointDown:
+      +MaxHealthPointDown(currentHP: int): int
+  
