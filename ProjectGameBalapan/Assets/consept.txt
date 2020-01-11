@@ -1,12 +1,12 @@
-GAME 
-Konsep : Rumble Racing
+GAME:
+Concept : Rumble Racing
 Platform : Android
 Genre : Arcade (Single, Multiplayer)
-Konsep Cerita : Mitologi Yunani
-Fitur : LAN
+Story Theme : Mitologi Yunani
+Feature : LAN
 
 
-User Interfaces :
+User Interfaces:
   List Scene : 
     -Main Menu
     -Misi
@@ -15,32 +15,32 @@ User Interfaces :
 
   Scene Main Menu:
     1.Menu Button:
-      a.Play Mode
+      A.Play Mode
         i.Single Player
           1.Mission
             a.New Game
             b.Continue
           2.Collection
             a.Arena
-            b.Mobil
+            b.Vehicle
         ii.Multi Player
           1.Create Server
-            a.Nama 
-            b.Password (Opsional)
+            a.Server Name
+            b.Password (Optional)
           2.Join Server
             a.Connect Server
-          3.Mobil 
-            a.Arena
-      b.Setting
+          3.Arena
+            a.Vehicle
+      B.Setting
         i.SFX
         ii.BGM
         iii.Brightness (Opsional)
-      c.Help
+      C.Help
         i.Guide
           1.Control Game
           2.Multiplayer Guide
         ii.About
-      d.Quit
+      D.Quit
 
   Scenes Misi 
     Zeus  Arc :
@@ -66,13 +66,38 @@ User Interfaces :
 
 -------------------------------------------------------------------------
 
-Class:
-  + Car:
-    - name : string
-    - speed : int
-    + Rem : int
-    + Speed : int
-      - get
-      - set
-    + 
+class:
+  +Vehicle:
+    -name : string
+    -speed : int
+    -power : int
+    -defense : int
+    -healthPoint : float
+    #tipeKendaraan : TipeKendaraan
+    +Name : string
+      get
+    +Rem() : void
+
+class:
+  +Skill : abstract
+    -name : string
+    -animation : Animation
+    +PlayAnimation() : void
+
+class:
+  +Player:
+    -name : string
+    -vehicle : Vehicle
+    -skill[] : SKill
+    +Vehicle : Vehicle
+      set
+    +UseSkill(index : int) : void
+
+class:
+  <Enemuration>
+  TipeKendaraan:
+    Ocean
+    Hell
+    Sky
       
+
