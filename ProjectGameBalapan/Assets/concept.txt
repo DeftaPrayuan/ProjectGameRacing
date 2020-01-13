@@ -110,6 +110,15 @@ class:
       get,set
     +UseSkill(index: int): void
 
+  +Enemy:
+    -name: string
+    -vehicle: Vehicle
+    -rank: int
+    -skill[]: Skill
+    +Rank: int
+      get,set
+    +UseSkill(index: int): void
+
   +Vehicle:
     -name: string
     -speed: int
@@ -176,7 +185,7 @@ Class:
     -controlGameBtn: Button
     -multiPlayerGuideBtn: Button
     -aboutBtn: Button
-    -exitBtn: Button
+    -quitConfirmBtn: Button
     -yesBtn: Button
     -backBtns: Button[]
     -Start(): void
