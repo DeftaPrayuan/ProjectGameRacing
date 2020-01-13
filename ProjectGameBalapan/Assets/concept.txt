@@ -154,7 +154,6 @@ interface:
       +SpeedDown(currentSpd: int): int
     +MaxHealthPointDown:
       +MaxHealthPointDown(currentHP: int): int
-  
 
 ----------------------------------------------------------------
 
