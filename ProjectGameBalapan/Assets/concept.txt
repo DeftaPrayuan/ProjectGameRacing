@@ -9,9 +9,10 @@ Feature     : LAN
 User Interfaces:
   List Scene : 
     -Main Menu
-    -Misi
-    -Server
-    -Tiap Arena 
+    -Mission
+    -Vehicle Collections
+    -Arena Collections
+    -
 
   Scene Main Menu:
     1.Menu Button:
@@ -43,9 +44,9 @@ User Interfaces:
         i .Yes
         ii.No
 
-  Scene Gameplay Menu:
+  Scene Mission:
     1.Menu Button:
-      A.Avatar Button
+      A.Avatar
         i  .Resume
         ii .Restart
         iii.Hint
@@ -61,60 +62,65 @@ User Interfaces:
         Vi .Quit
           1.Yes
           2.No
+      
+      B.Use Skill
+        i  .Skill 1
+        ii .Skill 2
+        iii.Skill 3
+
+Mission
+  Partner :
+    -Athena (Healing) (Sky) | Dari Awal hingga Akhir
+    -Hermes (Lightning) (Sky) | Ketika Arc Hades
+    -Herakles (11 Slot Item) (Sky) | Ketika Arc Zeus dan Hades
+    -Perseus (Physical Attack) (Sky, Ocean) | Ketika Arc Poseidon dan Hades
+
+  Zeus  Arc :
+    -Zeus (Thunder) (Sky) = Elang
+    -Herakles (11 Slot Item) (Sky) = Singa
+      -Singa Nemeia
+      -Hidra Lema
+      -Rusa Kerineia
+      -Babi Erimanthos
+      -Kandang kuda milik Raja Augeas
+      -Burung2 Stimfalia
+      -Banteng Kreta
+      -Kuda2 Betina Diomedes
+      -Sabuk Hippolita
+      -Ternak milik Gerion
+      -Apel Hesperides
+    -Hermes (Lightning) (Sky) = Kendaraan biasa
+      -Bandit
+    -Apollo (Art) (Sky) = Burung gagak dan lumba-lumba
+    -Artemis (Wild) (Sky) = Kereta perang yg ditarik sepasang rusa
+      -Penyelamatan para wanita dari makhluk buas
+
+  Poseidon Arc :
+    -Poseidon (Tsunami) (Ocean) = Kereta ditarik Kuda Laut
+    -Perseus (Physical Attack) (Sky, Ocean)
+      -Penyelamatan Andromeda
+      -Mendapatkan Pegasus
+      -Gorgon
+      -Medusa
   
-  Mission
-    Partner :
-      -Athena (Healing) (Sky) | Dari Awal hingga Akhir
-      -Hermes (Lightning) (Sky) | Ketika Arc Hades
-      -Herakles (11 Slot Item) (Sky) | Ketika Arc Zeus dan Hades
-      -Perseus (Physical Attack) (Sky, Ocean) | Ketika Arc Poseidon dan Hades
-
-    Zeus  Arc :
-      -Zeus (Thunder) (Sky) = Elang
-      -Herakles (11 Slot Item) (Sky) = Singa
-        -Singa Nemeia
-        -Hidra Lema
-        -Rusa Kerineia
-        -Babi Erimanthos
-        -Kandang kuda milik Raja Augeas
-        -Burung2 Stimfalia
-        -Banteng Kreta
-        -Kuda2 Betina Diomedes
-        -Sabuk Hippolita
-        -Ternak milik Gerion
-        -Apel Hesperides
-      -Hermes (Lightning) (Sky) = Kendaraan biasa
-        -Bandit
-      -Apollo (Art) (Sky) = Burung gagak dan lumba-lumba
-      -Artemis (Wild) (Sky) = Kereta perang yg ditarik sepasang rusa
-        -Penyelamatan para wanita dari makhluk buas
-
-    Poseidon Arc :
-      -Poseidon (Tsunami) (Ocean) = Kereta ditarik Kuda Laut
-      -Perseus (Physical Attack) (Sky, Ocean)
-        -Penyelamatan Andromeda
-        -Mendapatkan Pegasus
-        -Gorgon
-        -Medusa
-    
-    Hades Arc :
-      -Hades (Ruler of Hell) (Hell) = Kereta ditarik 4 kuda hitam
-        -Cerberus vs Herakles
-        -Hermes vs Perajurit untuk masuk ke dunia bawah bersama Herakles
+  Hades Arc :
+    -Hades (Ruler of Hell) (Hell) = Kereta ditarik 4 kuda hitam
+      -Cerberus vs Herakles
+      -Hermes vs Perajurit untuk masuk ke dunia bawah bersama Herakles
 
 
-  Object Mission
-    1.Arena : 
-      a.Jebakan Jalan Berlubang
-      b.Jebakan Jalan Kembali Ke Start
-      c.Jebakan Jalan Licin
-      d.Cuaca Jalan Berkabut (Pengendara Buta Arah)
-      e.Cuaca Badai (Pengendara Tertiup Angin dan Tidak Terkontrol)
-    2.Items :
-      a.Tembak (Efek berhenti dan terpental)
-      b.Menempel (Efek  menempel kemobil lawan selama 30 detik)
-      c.Menukar (Menukar posisi si penembak dengan si korban)
-      d.Invisible (Tidak terlihat di arena)
+Object Mission
+  1.Arena : 
+    a.Jebakan Jalan Berlubang
+    b.Jebakan Jalan Kembali Ke Start
+    c.Jebakan Jalan Licin
+    d.Cuaca Jalan Berkabut (Pengendara Buta Arah)
+    e.Cuaca Badai (Pengendara Tertiup Angin dan Tidak Terkontrol)
+  2.Items :
+    a.Tembak (Efek berhenti dan terpental)
+    b.Menempel (Efek  menempel kemobil lawan selama 30 detik)
+    c.Menukar (Menukar posisi si penembak dengan si korban)
+    d.Invisible (Tidak terlihat di arena)
 
 -------------------------------------------------------------------------
 
