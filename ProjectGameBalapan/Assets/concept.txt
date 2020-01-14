@@ -67,7 +67,7 @@ User Interfaces:
         i  .Skill 1
         ii .Skill 2
         iii.Skill 3
-        
+
       C.Controller Area
         i  .Right
         ii .Left
@@ -162,6 +162,7 @@ class:
     +Name: string
       get
     +Rem(): void
+    +Run(): void
 
   +Skill:
     -name: string
