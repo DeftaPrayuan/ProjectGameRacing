@@ -134,7 +134,7 @@ class:
     -name: string
     -vehicle: Vehicle
     -rank: int
-    -skill[]: SKill
+    -skill: SKill[]
     +Name: string
       get,set
     +Vehicle: Vehicle
@@ -147,7 +147,7 @@ class:
     -name: string
     -vehicle: Vehicle
     -rank: int
-    -skill[]: Skill
+    -skill: Skill[]
     +Rank: int
       get,set
     +UseSkill(index: int): void
