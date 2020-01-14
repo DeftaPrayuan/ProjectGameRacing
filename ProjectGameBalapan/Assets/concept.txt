@@ -43,9 +43,31 @@ User Interfaces:
         i .Yes
         ii.No
 
-  Scenes Misi 
+  Scene Gameplay Menu:
+    1.Menu Button:
+      A.Avatar Button
+        i  .Resume
+        ii .Restart
+        iii.Hint
+        iV .Setting
+          1.SFX
+          2.BGM
+          3.Brightness (Opsional)
+        V  .Main Menu
+          1.Save Confirmation
+            a.Yes and goto Main Menu
+            b.No and goto Main Menu
+            c.Cancel
+        Vi .Quit
+          1.Yes
+          2.No
+  
+  Mission
     Partner :
-      -Athena (Healing) (Sky)
+      -Athena (Healing) (Sky) | Dari Awal hingga Akhir
+      -Hermes (Lightning) (Sky) | Ketika Arc Hades
+      -Herakles (11 Slot Item) (Sky) | Ketika Arc Zeus dan Hades
+      -Perseus (Physical Attack) (Sky, Ocean) | Ketika Arc Poseidon dan Hades
 
     Zeus  Arc :
       -Zeus (Thunder) (Sky) = Elang
@@ -81,7 +103,7 @@ User Interfaces:
         -Hermes vs Perajurit untuk masuk ke dunia bawah bersama Herakles
 
 
-  Misi
+  Object Mission
     1.Arena : 
       a.Jebakan Jalan Berlubang
       b.Jebakan Jalan Kembali Ke Start
