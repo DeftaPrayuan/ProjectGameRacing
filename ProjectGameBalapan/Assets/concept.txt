@@ -1,18 +1,18 @@
 GAME:
-Concept     : Rumble Racing
-Platform    : Android
-Genre       : Arcade (Single, Multiplayer)
-Story Theme : Mitologi Yunani
-Feature     : LAN
+  Concept     : Rumble Racing like Game
+  Platform    : Android
+  Genre       : Arcade (Single, Multiplayer), Adventure, Racing
+  Story Theme : Mitologi Yunani
+  Feature     : LAN
 
+-------------------------------------------------------------------------
 
-User Interfaces:
+User Interfaces
   List Scene : 
     -Main Menu
     -Mission
     -Vehicle Collections
     -Arena Collections
-    -
 
   Scene Main Menu:
     1.Menu Button:
@@ -49,7 +49,10 @@ User Interfaces:
       A.Avatar
         i  .Resume
         ii .Restart
+          1.Yes
+          2.No
         iii.Hint
+          1. Back
         iV .Setting
           1.SFX
           2.BGM
@@ -129,7 +132,7 @@ Object Mission
 
 -------------------------------------------------------------------------
 
-class:
+Class:
   +Player:
     -name: string
     -vehicle: Vehicle
@@ -169,6 +172,70 @@ class:
     -animation: Animation
     +PlayAnimation(): void
 
+  +Item:
+    -name: string
+    -skill: Skill
+    +Item(): 
+    +OnTriggerEnter2D(collision: Collision2D): void
+
+  +Menu:
+    #sfxSlider: Slider
+    #bgmSlider: Slider
+    #brightnessLevelSlider: Slider
+    #settingBtn: Button
+    #helpBtn: Button
+    #quitConfirmBtn: Button
+    #yesBtn: Button
+    #backBtn: Button[]
+    #VolumeSFX(): void
+    #VolumeBGM(): void
+    #BrightnessLevel(): void
+    +PanelHelp(): void
+    +PanelSetting(): void
+    +PanelQuitConfirm(): void
+    #QuitConfirm(): void
+
+  +MainMenu: Menu
+    -playModeBtn: Button
+    -singlePlayerBtn: Button
+    -missionBtn: Button
+    -newGameBtn: Button
+    -continueBtn: Button
+    -collectionBtn: Button
+    -arenaBtn: Button
+    -vehicleBtn: Button
+    -multiPlayerBtn: Button
+    -controlGameBtn: Button
+    -multiPlayerGuideBtn: Button
+    -aboutBtn: Button
+    -Start(): void
+    -Update(): void
+    +PanelMission(): void
+    +NewGame(): void
+    +Continue(): void
+    +PanelCollection(): void
+    +PanelArenaCollections(): void
+    +PanelVehicleCollections(): void
+    +PanelControlGame(): void
+    +PanelAbout(): void
+
+  +GameplayMenu: Menu
+    -avatarBtn: Button
+    -resumeBtn: Button
+    -restartBtn: Button
+    -mainMenuBtn: Button
+    -saveConfirmBtn: Button
+    -saveAndMainMenuBtn: Button
+    -notSaveAndMainMenuBtn: Button
+    -skillBtn: Button[]
+    -rightBtn: Button
+    -leftBtn: Button
+    -breakBtn: Button
+    -Start(): void
+    -Update(): void
+    +PanelGotoMenu(): void
+    +PanelRestart(): void
+
 -------------------------------------------------------------------------
 
 Enemuration:
@@ -177,7 +244,7 @@ Enemuration:
       
 -------------------------------------------------------------------------
 
-interface:
+Interface:
   BuffType:
     +PowerUp:
       +PowerUp(currentPower: int): int
@@ -199,45 +266,3 @@ interface:
       +MaxHealthPointDown(currentHP: int): int
 
 ----------------------------------------------------------------
-
-Class:
-  +MainMenu:
-    -playModeBtn: Button
-    -singlePlayerBtn: Button
-    -missionBtn: Button
-    -newGameBtn: Button
-    -continueBtn: Button
-    -collectionBtn: Button
-    -arenaBtn: Button
-    -vehicleBtn: Button
-    -multiPlayerBtn: Button
-    -settingBtn: Button
-    -sfxSlider: Slider
-    -bgmSlider: Slider
-    -brightnessLevelSlider: Slider
-    -helpBtn: Button
-    -controlGameBtn: Button
-    -multiPlayerGuideBtn: Button
-    -aboutBtn: Button
-    -quitConfirmBtn: Button
-    -yesBtn: Button
-    -backBtns: Button[]
-    -Start(): void
-    -Update(): void
-    +PanelMission(): void
-    +NewGame(): void
-    +Continue(): void
-    -VolumeSFX(): void
-    -VolumeBGM(): void
-    -BrightnessLevel(): void
-    -QuitConfirm(): void
-    +PanelCollection(): void
-    +PanelArenaCollections(): void
-    +PanelVehicleCollections(): void
-    +PanelSetting(): void
-    +PanelHelp(): void
-    +PanelControlGame(): void
-    +PanelAbout(): void
-    +PanelQuitConfirm(): void
-
-
