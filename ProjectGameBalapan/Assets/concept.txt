@@ -119,16 +119,34 @@ Mission
 
 Object Mission
   1.Arena :
-    a.Jebakan Jalan Berlubang
-    b.Jebakan Jalan Kembali Ke Start
-    c.Jebakan Jalan Licin
-    d.Cuaca Jalan Berkabut (Pengendara Buta Arah)
-    e.Cuaca Badai (Pengendara Tertiup Angin dan Tidak Terkontrol)
-  2.Items :
-    a.Tembak (Efek berhenti dan terpental)
-    b.Menempel (Efek  menempel kemobil lawan selama 30 detik)
-    c.Menukar (Menukar posisi si penembak dengan si korban)
-    d.Invisible (Tidak terlihat di arena)
+    i .Umum:
+      a.Jebakan Jalan Berlubang
+      b.Jebakan Jalan Kembali Ke Start
+      c.Jebakan Jalan Licin
+    ii.Khusus:
+      1.Zeus Arc:
+        a.Cuaca Jalan Berkabut (Pengendara Buta Arah)
+        b.Cuaca Badai (Pengendara Tertiup Angin dan Tidak Terkontrol)
+      2.Poseidon Arc:
+      3.Hades Arc:
+  2.Items : Box (isi dari box acak)
+    i .Normal Skill:
+      a.Tembak
+        1.Efek berhenti beberapa detik
+        2.Efek terpental
+        3.Efek mengurangi kecepatan
+        4.Efek dunia kebalikan
+      b.Menempel
+        1.Efek menempel ke mobil lawan selama beberapa detik
+      c.Invisible
+        1.Tidak terlihat di arena
+      d.Menambah
+        1.Kecepatan
+        2.Power
+        3.HP
+    ii.Special Skill:
+      a.Menukar posisi penembak dengan target
+      b.Membuat jalan pintas (Posisi acak)
 
 -------------------------------------------------------------------------
 
