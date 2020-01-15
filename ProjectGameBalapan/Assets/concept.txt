@@ -118,7 +118,7 @@ Mission
 
 
 Object Mission
-  1.Arena : 
+  1.Arena :
     a.Jebakan Jalan Berlubang
     b.Jebakan Jalan Kembali Ke Start
     c.Jebakan Jalan Licin
