@@ -1,17 +1,18 @@
 GAME:
-Concept     : Rumble Racing
-Platform    : Android
-Genre       : Arcade (Single, Multiplayer)
-Story Theme : Mitologi Yunani
-Feature     : LAN
+  Concept     : Rumble Racing like Game
+  Platform    : Android
+  Genre       : Arcade (Single, Multiplayer), Adventure, Racing
+  Story Theme : Mitologi Yunani
+  Feature     : LAN
 
+-------------------------------------------------------------------------
 
-User Interfaces:
+User Interfaces
   List Scene : 
     -Main Menu
-    -Misi
-    -Server
-    -Tiap Arena 
+    -Mission
+    -Vehicle Collections
+    -Arena Collections
 
   Scene Main Menu:
     1.Menu Button:
@@ -43,69 +44,113 @@ User Interfaces:
         i .Yes
         ii.No
 
-  Scenes Misi 
-    Partner :
-      -Athena (Healing) (Sky)
+  Scene Mission:
+    1.Menu Button:
+      A.Avatar
+        i  .Resume
+        ii .Restart
+          1.Yes
+          2.No
+        iii.Hint
+          1. Back
+        iV .Setting
+          1.SFX
+          2.BGM
+          3.Brightness (Opsional)
+        V  .Main Menu
+          1.Save Confirmation
+            a.Yes and goto Main Menu
+            b.No and goto Main Menu
+            c.Cancel
+        Vi .Quit
+          1.Yes
+          2.No
+      
+      B.Use Skill
+        i  .Skill 1
+        ii .Skill 2
+        iii.Skill 3
 
-    Zeus  Arc :
-      -Zeus (Thunder) (Sky) = Elang
-      -Herakles (11 Slot Item) (Sky) = Singa
-        -Singa Nemeia
-        -Hidra Lema
-        -Rusa Kerineia
-        -Babi Erimanthos
-        -Kandang kuda milik Raja Augeas
-        -Burung2 Stimfalia
-        -Banteng Kreta
-        -Kuda2 Betina Diomedes
-        -Sabuk Hippolita
-        -Ternak milik Gerion
-        -Apel Hesperides
-      -Hermes (Lightning) (Sky) = Kendaraan biasa
-        -Bandit
-      -Apollo (Art) (Sky) = Burung gagak dan lumba-lumba
-      -Artemis (Wild) (Sky) = Kereta perang yg ditarik sepasang rusa
-        -Penyelamatan para wanita dari makhluk buas
+      C.Controller Area
+        i  .Right
+        ii .Left
+        iii.Break
 
-    Poseidon Arc :
-      -Poseidon (Tsunami) (Ocean) = Kereta ditarik Kuda Laut
-      -Perseus (Physical Attack) (Sky, Ocean)
-        -Penyelamatan Andromeda
-        -Mendapatkan Pegasus
-        -Gorgon
-        -Medusa
-    
-    Hades Arc :
-      -Hades (Ruler of Hell) (Hell) = Kereta ditarik 4 kuda hitam
-        -Cerberus vs Herakles
-        -Hermes vs Perajurit untuk masuk ke dunia bawah bersama Herakles
+Mission
+  Partner :
+    -Athena (Healing) (Sky) | Dari Awal hingga Akhir
+    -Hermes (Lightning) (Sky) | Ketika Arc Hades
+    -Herakles (11 Slot Item) (Sky) | Ketika Arc Zeus dan Hades
+    -Perseus (Physical Attack) (Sky, Ocean) | Ketika Arc Poseidon dan Hades
+
+  Zeus  Arc :
+    -Zeus (Thunder) (Sky) = Elang
+    -Herakles (11 Slot Item) (Sky) = Singa
+      -Singa Nemeia
+      -Hidra Lema
+      -Rusa Kerineia
+      -Babi Erimanthos
+      -Kandang kuda milik Raja Augeas
+      -Burung2 Stimfalia
+      -Banteng Kreta
+      -Kuda2 Betina Diomedes
+      -Sabuk Hippolita
+      -Ternak milik Gerion
+      -Apel Hesperides
+    -Hermes (Lightning) (Sky) = Kendaraan biasa
+      -Bandit
+    -Apollo (Art) (Sky) = Burung gagak dan lumba-lumba
+    -Artemis (Wild) (Sky) = Kereta perang yg ditarik sepasang rusa
+      -Penyelamatan para wanita dari makhluk buas
+
+  Poseidon Arc :
+    -Poseidon (Tsunami) (Ocean) = Kereta ditarik Kuda Laut
+    -Perseus (Physical Attack) (Sky, Ocean)
+      -Penyelamatan Andromeda
+      -Mendapatkan Pegasus
+      -Gorgon
+      -Medusa
+  
+  Hades Arc :
+    -Hades (Ruler of Hell) (Hell) = Kereta ditarik 4 kuda hitam
+      -Cerberus vs Herakles
+      -Hermes vs Perajurit untuk masuk ke dunia bawah bersama Herakles
 
 
-  Misi
-    1.Arena : 
-      a.Jebakan Jalan Berlubang
-      b.Jebakan Jalan Kembali Ke Start
-      c.Jebakan Jalan Licin
-      d.Cuaca Jalan Berkabut (Pengendara Buta Arah)
-      e.Cuaca Badai (Pengendara Tertiup Angin dan Tidak Terkontrol)
-    2.Items :
-      a.Tembak (Efek berhenti dan terpental)
-      b.Menempel (Efek  menempel kemobil lawan selama 30 detik)
-      c.Menukar (Menukar posisi si penembak dengan si korban)
-      d.Invisible (Tidak terlihat di arena)
+Object Mission
+  1.Arena :
+    a.Jebakan Jalan Berlubang
+    b.Jebakan Jalan Kembali Ke Start
+    c.Jebakan Jalan Licin
+    d.Cuaca Jalan Berkabut (Pengendara Buta Arah)
+    e.Cuaca Badai (Pengendara Tertiup Angin dan Tidak Terkontrol)
+  2.Items :
+    a.Tembak (Efek berhenti dan terpental)
+    b.Menempel (Efek  menempel kemobil lawan selama 30 detik)
+    c.Menukar (Menukar posisi si penembak dengan si korban)
+    d.Invisible (Tidak terlihat di arena)
 
 -------------------------------------------------------------------------
 
-class:
+Class:
   +Player:
     -name: string
     -vehicle: Vehicle
     -rank: int
-    -skill[]: SKill
+    -skill: SKill[]
     +Name: string
       get,set
     +Vehicle: Vehicle
       get,set
+    +Rank: int
+      get,set
+    +UseSkill(index: int): void
+
+  +Enemy:
+    -name: string
+    -vehicle: Vehicle
+    -rank: int
+    -skill: Skill[]
     +Rank: int
       get,set
     +UseSkill(index: int): void
@@ -120,11 +165,76 @@ class:
     +Name: string
       get
     +Rem(): void
+    +Run(): void
 
   +Skill:
     -name: string
     -animation: Animation
     +PlayAnimation(): void
+
+  +Item:
+    -name: string
+    -skill: Skill
+    +Item(): 
+    +OnTriggerEnter2D(collision: Collision2D): void
+
+  +Menu:
+    #sfxSlider: Slider
+    #bgmSlider: Slider
+    #brightnessLevelSlider: Slider
+    #settingBtn: Button
+    #helpBtn: Button
+    #quitConfirmBtn: Button
+    #yesBtn: Button
+    #backBtn: Button[]
+    #VolumeSFX(): void
+    #VolumeBGM(): void
+    #BrightnessLevel(): void
+    +PanelHelp(): void
+    +PanelSetting(): void
+    +PanelQuitConfirm(): void
+    #QuitConfirm(): void
+
+  +MainMenu: Menu
+    -playModeBtn: Button
+    -singlePlayerBtn: Button
+    -missionBtn: Button
+    -newGameBtn: Button
+    -continueBtn: Button
+    -collectionBtn: Button
+    -arenaBtn: Button
+    -vehicleBtn: Button
+    -multiPlayerBtn: Button
+    -controlGameBtn: Button
+    -multiPlayerGuideBtn: Button
+    -aboutBtn: Button
+    -Start(): void
+    -Update(): void
+    +PanelMission(): void
+    +NewGame(): void
+    +Continue(): void
+    +PanelCollection(): void
+    +PanelArenaCollections(): void
+    +PanelVehicleCollections(): void
+    +PanelControlGame(): void
+    +PanelAbout(): void
+
+  +GameplayMenu: Menu
+    -avatarBtn: Button
+    -resumeBtn: Button
+    -restartBtn: Button
+    -mainMenuBtn: Button
+    -saveConfirmBtn: Button
+    -saveAndMainMenuBtn: Button
+    -notSaveAndMainMenuBtn: Button
+    -skillBtn: Button[]
+    -rightBtn: Button
+    -leftBtn: Button
+    -breakBtn: Button
+    -Start(): void
+    -Update(): void
+    +PanelGotoMenu(): void
+    +PanelRestart(): void
 
 -------------------------------------------------------------------------
 
@@ -134,7 +244,7 @@ Enemuration:
       
 -------------------------------------------------------------------------
 
-interface:
+Interface:
   BuffType:
     +PowerUp:
       +PowerUp(currentPower: int): int
@@ -154,27 +264,5 @@ interface:
       +SpeedDown(currentSpd: int): int
     +MaxHealthPointDown:
       +MaxHealthPointDown(currentHP: int): int
-  
 
 ----------------------------------------------------------------
-
-Class:
-  +MainMenu:
-    -Start(): void
-    +PanelMission(): void
-    +NewGame(): void
-    +Continue(): void
-    +VolumeSFX(): void
-    +VolumeBGM(): void
-    +BrightnessLevel(): void
-    +QuitConfirm(): void
-    +PanelCollection(): void
-    +PanelArenaCollections(): void
-    +PanelVehicleCollections(): void
-    +PanelSetting(): void
-    +PanelHelp(): void
-    +PanelControlGame(): void
-    +PanelAbout(): void
-    -PanelQuit(): void
-
-
