@@ -135,7 +135,6 @@ Object Mission
         1.Efek berhenti beberapa detik
         2.Efek terpental
         3.Efek mengurangi kecepatan
-        4.Efek dunia kebalikan
       b.Menempel
         1.Efek menempel ke mobil lawan selama beberapa detik
       c.Invisible
@@ -144,9 +143,11 @@ Object Mission
         1.Kecepatan
         2.Power
         3.HP
+        4.Shield
     ii.Special Skill:
       a.Menukar posisi penembak dengan target
       b.Membuat jalan pintas (Posisi acak)
+      c.Efek dunia kebalikan
 
 -------------------------------------------------------------------------
 
@@ -155,7 +156,7 @@ Class:
     -name: string
     -vehicle: Vehicle
     -rank: int
-    -skill: SKill[]
+    -skill: SKill[3]
     +Name: string
       get,set
     +Vehicle: Vehicle
@@ -184,6 +185,7 @@ Class:
       get
     +Rem(): void
     +Run(): void
+    +ChangeDirection(direction: Vector3): void
 
   +Skill:
     -name: string
@@ -193,7 +195,7 @@ Class:
   +Item:
     -name: string
     -skill: Skill
-    +Item(): 
+    +Item():
     +OnTriggerEnter2D(collision: Collision2D): void
 
   +Menu:
@@ -265,22 +267,28 @@ Enemuration:
 Interface:
   BuffType:
     +PowerUp:
-      +PowerUp(currentPower: int): int
+      +PowerUp(currentPower: int): void
     +DefensiveUp:
-      +DefenseUp(currentDef: int): int
+      +DefenseUp(currentDef: int): void
     +MaxHealthPointUp:
-      +MaxHealthPointUp(currentHP: int): int
+      +MaxHealthPointUp(currentHP: int): void
     +SpeedUp:
-      +SpeedUp(currentSpd: int): int
+      +SpeedUp(currentSpd: int): void
+    +SetPosition:
+      +SetPosition(player: Transform, target: Transform): void
 
   DebuffType:
     +PowerDown:
-      +PowerDown(currentPower: int): int
+      +PowerDown(currentPower: int): void
     +DefenseDown:
-      +DefenseDown(currentDef: int): int
+      +DefenseDown(currentDef: int): void
     +SpeedDown:
-      +SpeedDown(currentSpd: int): int
+      +SpeedDown(currentSpd: int): void
     +MaxHealthPointDown:
-      +MaxHealthPointDown(currentHP: int): int
+      +MaxHealthPointDown(currentHP: int): void
+    +Stop:
+      +Stop(player: Player, duration: float): void
+    +Flung:
+      +Flung(player: Transform): void
 
 ----------------------------------------------------------------
