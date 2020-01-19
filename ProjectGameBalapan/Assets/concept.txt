@@ -76,6 +76,8 @@ User Interfaces
         ii .Left
         iii.Break
 
+-------------------------------------------------------------------------
+
 Mission
   Partner :
     -Athena (Healing) (Sky) | Dari Awal hingga Akhir
@@ -116,6 +118,7 @@ Mission
       -Cerberus vs Herakles
       -Hermes vs Perajurit untuk masuk ke dunia bawah bersama Herakles
 
+-------------------------------------------------------------------------
 
 Object Mission
   1.Arena :
