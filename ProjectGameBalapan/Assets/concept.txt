@@ -154,11 +154,13 @@ Object Mission
 Class:
   +Player:
     -name: string
-    -vehicle: Vehicle
     -rank: int
+    -laps: int
+    -vehicle: Vehicle
     -skill: SKill[3]
+    +Player(_name: string):
     +Name: string
-      get,set
+      get
     +Vehicle: Vehicle
       get,set
     +Rank: int
