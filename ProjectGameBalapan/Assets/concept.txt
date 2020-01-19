@@ -1,10 +1,12 @@
 GAME:
-  Concept     : Rumble Racing like Game
+  Concept     : Rumble Racing / CTR like Game
   Platform    : Android
   Genre       : Arcade (Single, Multiplayer), Adventure, Racing
   Story Theme : Mitologi Yunani
   Feature     : LAN
 
+-------------------------------------------------------------------------
+Graphic Artist - Game Designer
 -------------------------------------------------------------------------
 
 User Interfaces
@@ -15,67 +17,70 @@ User Interfaces
     -Arena Collections
 
   Scene Main Menu:
-    1.Menu Button:
-      A.Play Mode
-        i .Single Player
-          1.Mission
-            a.New Game
-            b.Continue
-          2.Collections
-            a.Arena
-            b.Vehicle
-        ii.Multi Player
-          1.Create Server
-            a.Server Name
-            b.Password (Optional)
-          2.Join Server
-            a.Connect Server
-          3.Arena
-            a.Vehicle
-      B.Setting
-        i  .SFX
-        ii .BGM
-        iii.Brightness (Opsional)
-      C.Help
+    1.Menu :
+      A.Play Mode : Button
+        i .Single Player : Button
+          1.Mission : Button
+            a.New Game : Button
+            b.Continue : Button
+          2.Collections : Button
+            a.Arena : Button
+            b.Vehicle : Button
+        ii.Multi Player : Button
+          1.Create Server : Button
+            a.Server Name : Text Field
+            b.Password (Optional) : Text Field
+          2.Join Server : Button
+            a.Server Name : Text Field
+            b.Connect Server : Button
+          3.Arena : List
+            a.Vehicle : Image
+      B.Setting : Button
+        i  .SFX : Slider
+        ii .BGM : Slider
+        iii.Brightness (Opsional) : Slider
+      C.Help : Button
         i  .Control Game
         ii .Multiplayer Guide
         iii.About
-      D.Quit
-        i .Yes
-        ii.No
+      D.Quit : Button
+        i .Yes : Button
+        ii.No : Button
 
   Scene Mission:
     1.Menu Button:
-      A.Avatar
-        i  .Resume
-        ii .Restart
-          1.Yes
-          2.No
-        iii.Hint
-          1. Back
-        iV .Setting
-          1.SFX
-          2.BGM
-          3.Brightness (Opsional)
-        V  .Main Menu
-          1.Save Confirmation
-            a.Yes and goto Main Menu
-            b.No and goto Main Menu
-            c.Cancel
-        Vi .Quit
-          1.Yes
-          2.No
+      A.Avatar : Button
+        i  .Resume : Button
+        ii .Restart : Button
+          1.Yes : Button
+          2.No : Button
+        iii.Hint : Button
+          1. Back : Button
+        iV .Setting : Button
+          1.SFX : Slider
+          2.BGM : Slider
+          3.Brightness (Opsional) : Slider
+        V  .Main Menu : Button
+          1.Save Confirmation : Button
+            a.Yes and goto Main Menu : Button
+            b.No and goto Main Menu : Button
+            c.Cancel : Button
+        Vi .Quit : Button
+          1.Yes : Button
+          2.No : Button
       
       B.Use Skill
-        i  .Skill 1
-        ii .Skill 2
-        iii.Skill 3
+        i  .Skill 1 : Button
+        ii .Skill 2 : Button
+        iii.Skill 3 : Button
 
       C.Controller Area
         i  .Right
         ii .Left
         iii.Break
 
+-------------------------------------------------------------------------
+Game Designer
 -------------------------------------------------------------------------
 
 Mission
@@ -119,6 +124,8 @@ Mission
       -Hermes vs Perajurit untuk masuk ke dunia bawah bersama Herakles
 
 -------------------------------------------------------------------------
+Graphic Artist - Game Designer
+-------------------------------------------------------------------------
 
 Object Mission
   1.Arena :
@@ -128,21 +135,40 @@ Object Mission
       c.Jebakan Jalan Licin
     ii.Khusus:
       1.Zeus Arc:
-        a.Cuaca Jalan Berkabut (Pengendara Buta Arah)
-        b.Cuaca Badai (Pengendara Tertiup Angin dan Tidak Terkontrol)
+        a.Artemis - Apollo:
+          -Ular dari pohon (Memberi efek kejut ke player)
+          -Harimau (Mundur sedikit)
+          -Danau (Kembali ke garis Start)
+        b.Zeus:
+          -Cuaca Jalan Berkabut (Pengendara Buta Arah)
+          -Cuaca Badai (Pengendara Tertiup Angin dan Tidak Terkontrol)
       2.Poseidon Arc:
       3.Hades Arc:
-  2.Items : Box (isi dari box acak)
+
+  2.Object Arena :
+    i  .Arena 1:
+      1.Makhluk Hidup:
+        a.Burung
+        b.Ular
+        c.Harimau (Mundur sedikit)
+      2.Benda Mati:
+        a.Batu
+        b.Tombak Nyasar
+        c.Pepohonan
+        d.Danau (Kembali ke garis Start)
+        e.Rerumputan
+
+  3.Items : Box (isi dari box acak)
     i .Normal Skill:
-      a.Tembak
+      a.Tembak :
         1.Efek berhenti beberapa detik
         2.Efek terpental
         3.Efek mengurangi kecepatan
-      b.Menempel
+      b.Menempel :
         1.Efek menempel ke mobil lawan selama beberapa detik
-      c.Invisible
+      c.Invisible :
         1.Tidak terlihat di arena
-      d.Menambah
+      d.Menambah :
         1.Kecepatan
         2.Power
         3.HP
@@ -152,6 +178,8 @@ Object Mission
       b.Membuat jalan pintas (Posisi acak)
       c.Efek dunia kebalikan
 
+-------------------------------------------------------------------------
+Programmer - Game Designer
 -------------------------------------------------------------------------
 
 Class:
