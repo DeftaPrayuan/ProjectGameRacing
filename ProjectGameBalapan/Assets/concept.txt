@@ -131,15 +131,14 @@ Object Mission
   1.Arena :
     i .Umum:
       a.Jebakan Jalan Berlubang
-      b.Jebakan Jalan Kembali Ke Start
-      c.Jebakan Jalan Licin
+      b.Jebakan Jalan Licin
     ii.Khusus:
       1.Zeus Arc:
         a.Artemis - Apollo:
           -Ular dari pohon (Memberi efek kejut ke player)
           -Danau (Kembali ke garis Start)
           -Rerutuhan Batu (Memperkecil arena)
-          -Harimau (Mundur sedikit)
+          -Harimau Menyergap (Mundur sedikit)
         b.Zeus:
           -Cuaca Jalan Berkabut (Pengendara Buta Arah)
           -Cuaca Badai (Pengendara Tertiup Angin dan Tidak Terkontrol)
@@ -151,12 +150,13 @@ Object Mission
       1.Makhluk Hidup:
         a.Burung
         b.Ular
-        c.Harimau (Mundur sedikit)
+        c.Harimau
+        d.Telur Burung
       2.Benda Mati:
         a.Batu
         b.Tombak Nyasar
         c.Pepohonan
-        d.Danau (Kembali ke garis Start)
+        d.Danau
         e.Rerumputan
 
   3.Items : Box (isi dari box acak)
