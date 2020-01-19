@@ -137,8 +137,9 @@ Object Mission
       1.Zeus Arc:
         a.Artemis - Apollo:
           -Ular dari pohon (Memberi efek kejut ke player)
-          -Harimau (Mundur sedikit)
           -Danau (Kembali ke garis Start)
+          -Rerutuhan Batu (Memperkecil arena)
+          -Harimau (Mundur sedikit)
         b.Zeus:
           -Cuaca Jalan Berkabut (Pengendara Buta Arah)
           -Cuaca Badai (Pengendara Tertiup Angin dan Tidak Terkontrol)
