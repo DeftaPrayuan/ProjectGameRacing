@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 164487946}
   - component: {fileID: 164487945}
   m_Layer: 5
-  m_Name: PanelTapRight
+  m_Name: PanelRightArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -638,6 +638,7 @@ GameObject:
   - component: {fileID: 976027677}
   - component: {fileID: 976027676}
   - component: {fileID: 976027680}
+  - component: {fileID: 976027681}
   m_Layer: 5
   m_Name: UI
   m_TagString: Untagged
@@ -744,6 +745,20 @@ MonoBehaviour:
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 1
   m_ChildControlHeight: 1
+--- !u!114 &976027681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 976027675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdaf4a7d4074cfc48839bb476b5de54b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panelLeftArea: {fileID: 1648143088}
+  panelRightArea: {fileID: 164487943}
+  panelTopArea: {fileID: 2027632206}
 --- !u!1 &1034123793
 GameObject:
   m_ObjectHideFlags: 0
@@ -1163,7 +1178,7 @@ GameObject:
   - component: {fileID: 1648143091}
   - component: {fileID: 1648143090}
   m_Layer: 5
-  m_Name: PanelTapLeft
+  m_Name: PanelLeftArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1292,7 +1307,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1814399566}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.062999494, y: 2.046001, z: -5}
+  m_LocalPosition: {x: 0, y: 2, z: -5}
   m_LocalScale: {x: 0.5000007, y: 0.5000007, z: 0.5}
   m_Children: []
   m_Father: {fileID: 518315525}

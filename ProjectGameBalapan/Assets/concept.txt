@@ -232,6 +232,16 @@ Class:
     +Item():
     +OnTriggerEnter2D(collision: Collision2D): void
 
+  +Controller:
+    -leftArea: Rect
+    -rightArea: Rect
+    -bottomArea: Rect
+    -instance: _ Controller
+    +Instance: _ Controller
+      -set
+    -Initialize(): void
+    +ChangeDirection(): void 
+
   +Menu:
     #sfxSlider: Slider
     #bgmSlider: Slider
