@@ -215,11 +215,12 @@ Class:
     -defense: int
     -healthPoint: float
     -vehicleType: VehicleType
+    -vehicle: GameObject
     +Name: string
       get
     +Rem(): void
     +Run(): void
-    +ChangeDirection(direction: Vector3): void
+    +UpdateDirection(direction: Vector3): void
 
   +Skill:
     -name: string
@@ -239,8 +240,8 @@ Class:
     -instance: _ Controller
     +Instance: _ Controller
       -set
-    -Initialize(): void
-    +ChangeDirection(): void 
+    -Init(): void
+    +TouchDetection(pos: Vector3): void 
 
   +Menu:
     #sfxSlider: Slider
