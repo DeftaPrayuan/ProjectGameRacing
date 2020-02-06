@@ -45,6 +45,5 @@ public class Vehicle : MonoBehaviour
   public void UpdateDirection(Vector3 direction)
   {
   }
-
   #endregion
 }

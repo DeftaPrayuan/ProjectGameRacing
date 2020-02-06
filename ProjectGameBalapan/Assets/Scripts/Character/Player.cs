@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-  // Attribute
+  #region Atribut
 	[SerializeField] private string name;
   [SerializeField] private int rank;
   [SerializeField] private int laps;
   [SerializeField] private Vehicle vehicle;
   [SerializeField] private Skill[] skill;
-  // Property
+  #endregion
+  
+  #region  Property
   public string Name
   {
     get
@@ -51,7 +53,9 @@ public class Player : MonoBehaviour
       laps = value;
     }
   }
-  // Method
+  #endregion
+
+  #region  Method
   public Player(string _name)
   {
     name = _name;
@@ -60,4 +64,5 @@ public class Player : MonoBehaviour
   {
 
   }
+  #endregion
 }

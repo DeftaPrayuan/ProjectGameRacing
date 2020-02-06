@@ -240,8 +240,7 @@ Class:
     -instance: _ Controller
     +Instance: _ Controller
       -set
-    -Init(): void
-    +TouchDetection(pos: Vector3): void 
+    +DirectionUpdate(pos: Vector3, player: Player): void 
 
   +Menu:
     #sfxSlider: Slider

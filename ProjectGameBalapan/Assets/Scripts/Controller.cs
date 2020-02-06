@@ -7,57 +7,49 @@ public class Controller : MonoBehaviour
 	#region Atribut
 	// Area kontrol layar sentuh
 	private Rect leftArea, rightArea, bottomArea;
-	// Objek yang dikendalikan
-	private Player player;
 	private static Controller instance;
 	#endregion
 
 	#region Properti
 	public static Controller Instance
 	{
-		set
+		get
 		{
 			if(instance == null)
 			{
 				instance = FindObjectOfType<Controller>();
-				instance.Init();
 			}
+			return instance;
 		}
 	}
 	#endregion
 
 	#region Method
-	// Menginisialisasi
-	private void Init() 
-	{
-	}
 	// Mengubah Arah
-	private void Update ()
+	public void DirectionUpdate (Vector3 pos, Player player)
 	{
-		// Mencari Gameobject yang terdapat Class Player
-		player = FindObjectOfType<Player>();
 		// Area Layar sentuh kiri / Belok kiri
 		leftArea = new Rect(0, Screen.height * .15f, Screen.width / 2, Screen.height * .72f);
 		// Area Layar sentuh kanan / Belok kanan
 		rightArea = new Rect(Screen.width / 2, Screen.height * .15f, Screen.width / 2, Screen .height * .72f);
 		// Area Layar sentuh bawah / Rem
 		bottomArea = new Rect(0, 0, Screen.width, Screen.height * .15f);
-		
-		if(Input.GetMouseButtonDown(0))
+
+		Debug.Log(Input.mousePosition);
+		if (leftArea.Contains(pos))
 		{
-			Debug.Log(Input.mousePosition);
-			if (leftArea.Contains(Input.mousePosition))
-			{
-				Debug.Log("Left : " + leftArea);
-			}
-			if (rightArea.Contains(Input.mousePosition))
-			{
-				Debug.Log("Right : " + rightArea);
-			}
-			if (bottomArea.Contains(Input.mousePosition))
-			{
-				Debug.Log("Bottom : " + bottomArea);
-			}
+			Debug.Log("Left : " + leftArea);
+			player.GetComponent<Transform>().Translate(Vector3.left);
+		}
+		if (rightArea.Contains(pos))
+		{
+			Debug.Log("Right : " + rightArea);
+			player.GetComponent<Transform>().Translate(Vector3.right);
+		}
+		if (bottomArea.Contains(pos))
+		{
+			Debug.Log("Bottom : " + bottomArea);
+			player.GetComponent<Transform>().Translate(Vector3.down);
 		}
 	}
 	#endregion
