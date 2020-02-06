@@ -240,7 +240,7 @@ Class:
     -instance: _ Controller
     +Instance: _ Controller
       -set
-    +DirectionUpdate(pos: Vector3, player: Player): void 
+    +ChangeDirection(pos: Vector3, player: Player): void 
 
   +Menu:
     #sfxSlider: Slider

@@ -26,7 +26,7 @@ public class Controller : MonoBehaviour
 
 	#region Method
 	// Mengubah Arah
-	public void DirectionUpdate (Vector3 pos, Player player)
+	public void ChangeDirection(Vector3 pos, Player player)
 	{
 		// Area Layar sentuh kiri / Belok kiri
 		leftArea = new Rect(0, Screen.height * .15f, Screen.width / 2, Screen.height * .72f);
@@ -39,17 +39,17 @@ public class Controller : MonoBehaviour
 		if (leftArea.Contains(pos))
 		{
 			Debug.Log("Left : " + leftArea);
-			player.GetComponent<Transform>().Translate(Vector3.left);
+			player.Vehicle.UpdateDirection(Vector3.left);
 		}
 		if (rightArea.Contains(pos))
 		{
 			Debug.Log("Right : " + rightArea);
-			player.GetComponent<Transform>().Translate(Vector3.right);
+			player.Vehicle.UpdateDirection(Vector3.right);
 		}
 		if (bottomArea.Contains(pos))
 		{
 			Debug.Log("Bottom : " + bottomArea);
-			player.GetComponent<Transform>().Translate(Vector3.down);
+			player.Vehicle.UpdateDirection(Vector3.down);
 		}
 	}
 	#endregion

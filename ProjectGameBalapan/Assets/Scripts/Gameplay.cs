@@ -23,7 +23,7 @@ public class Gameplay : MonoBehaviour
 	{
 		if(Input.GetMouseButtonDown(0))
 		{
-			Controller.Instance.DirectionUpdate(Input.mousePosition, player);
+			Controller.Instance.ChangeDirection(Input.mousePosition, player);
 		}
 	}
 	#endregion
